@@ -1,6 +1,6 @@
 const express = require('express');
-const authRouter = require('../jwt-mock-api/api/auth');
-const usersRouter = require('../jwt-mock-api/api/users');
+const authRouter = require('./auth');
+const usersRouter = require('./users');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
