@@ -1,6 +1,6 @@
 const express = require('express');
-const authRouter = require('./auth');
-const usersRouter = require('./users');
+const authRouter = require('../jwt-mock-api/api/auth');
+const usersRouter = require('../jwt-mock-api/api/users');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -18,6 +18,8 @@ app.get('/', (req, res) => {
 });
 
 // Start server
+/*
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+*/
