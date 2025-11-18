@@ -7,19 +7,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // --- Configuración de CORS ---
-const allowedOrigins = ['https://dominio-de-tu-react-app.vercel.app']; // URL de tu frontend
 const corsOptions = {
-  origin: function (origin, callback) {
-    // Permitir si el 'origin' está en la lista O si la petición es sin 'origin' (ej. Postman, o peticiones del mismo servidor)
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: '*', //Cambiar cuando se deploye el frontend
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Métodos HTTP permitidos
-  credentials: true, // Si necesitas enviar cookies/headers de autorización
-  optionsSuccessStatus: 204 // Código de estado para respuestas pre-vuelo (preflight)
+  credentials: true
 };
 
 // Middleware
