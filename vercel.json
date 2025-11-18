@@ -11,8 +11,5 @@
       "src": "api/index.js",
       "use": "@vercel/node"
     }
-  ],
-  "env": {
-    "JWT_SECRET": "@jwt_secret"
-  }
+  ]
 }
